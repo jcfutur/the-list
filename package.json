@@ -5,7 +5,7 @@
   "engines": {
     "node": "10"
   },
-  "homepage": "https://mern-workshop-app1.appspot.com/",
+  "homepage": "https://mern-workshop.appspot.com/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jcfutur/JC-MERN-Workshop.git"
+    "url": "git+http://github.com/jcfutur/JC-MERN-Workshop.git"
   },
   "author": "",
   "license": "ISC",
@@ -22,18 +22,10 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "body-parser": "^1.19.0",
     "dot-env": "0.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mdbreact": "^4.25.6",
     "mongoose": "^5.9.10",
-    "path": "^0.12.7",
-    "react-redux": "^7.2.0",
-    "react-thunk": "^1.0.0",
-    "reactstrap": "^8.4.1",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0",
-    "uuid": "^7.0.3"
+    "path": "^0.12.7"
   }
 }

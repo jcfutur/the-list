@@ -24,12 +24,24 @@ const Cat = mongoose.model('Cat', { name: String });
 
 app.use(express.static(path.join(__dirname, 'frontend/build')));
 
-app.post('/api', (req, res) => {
-    const body = req.body;
-    const kitty = new Cat({
-         name : body.name
+
+app.delete('/api/deleteCat/:id', (req, res) => {
+    Cat.findById(req.params.id)
+        .then(item => item.remove().then(() => res.json({success: true}), console.log(item.name + " a été supprimé")))
+        .catch(err => res.status(404).json({success: false}));
+
+});
+
+app.post('/api/putCat', (req, res) => {
+    const objetFront = req.body.lajout;
+    const objetToSave = new Cat({
+        name : objetFront.name
     });
-    kitty.save().then(() => console.log('Cat added to the DB'));
+    objetToSave.save().then(() => console.log(`${objetFront.name} a ete ajouté`));
+});
+
+app.get('/api/getCat', (req, res) => {
+    Cat.find().then(cat => res.status(200).json(cat))
 });
 
 app.get('/*', (req, res) => {
