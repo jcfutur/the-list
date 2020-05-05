@@ -86,7 +86,6 @@ putCat(env) {
                     
                     <MDBBtn onClick={this.putCat}>Ajouter</MDBBtn>
                 </form>
-                <MDBBtn onClick={this.getCat()}>Actualiser</MDBBtn><br/><br/>
                 <MDBListGroup>
                         {this.state.tableau.map( ({_id, name}) => (
                          <MDBListGroupItem className="d-flex" >

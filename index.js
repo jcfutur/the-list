@@ -20,7 +20,8 @@ mongoose.connection.on("error", () => {
     console.log("there was an error");
 });
 
-const Cat = mongoose.model('Cat', { name: String });
+const Cat = require('./models/cat');
+//const Cat = mongoose.model('Cat', { name: String });
 
 app.use(express.static(path.join(__dirname, 'frontend/build')));
 
@@ -51,3 +52,5 @@ app.get('/*', (req, res) => {
 app.listen(process.env.port || 8080, () => {
     console.log('express app is runnig on port 8080')
 });
+
+//const User = require('./models/user');
