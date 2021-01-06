@@ -21,7 +21,7 @@
     "url": "https://github.com/jcfutur/JC-MERN-Workshop/issues"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dot-env": "0.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
